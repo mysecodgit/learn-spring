@@ -1,27 +1,19 @@
 package com.springwithhudeifa.store.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "tags")
+public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Integer id;
 
     @Column(name = "name")
     private String name;
-
-    @Column(name = "email")
-    private String email;
-
-    @Column(name = "password")
-    private String password;
 }
